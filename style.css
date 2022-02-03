@@ -1,0 +1,114 @@
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--Very-Dark-Blue);
+}
+.container{
+    width: 90%;
+    margin: 0 auto 0;
+    background: var(--Very-Light-Gray);
+    text-align: center;
+    padding: 2em;
+}
+h1:first-of-type{
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+h1:last-of-type{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+p{
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+h2{
+    font-weight: 600;
+}
+.cards{
+    text-align: start;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: "one two four" auto "one three four" auto / 1fr 1fr 1fr
+}
+.card-1{
+    grid-area: one;
+    align-self: center;
+    border-top: 3px solid var(--Cyan);
+    padding: 20px;
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 0 1em rgba(0,0,0,0.5);
+}
+.card-2{
+    grid-area: two;
+    border-top: 3px solid var(--Red);
+    padding: 10px;
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 0 1em rgba(0,0,0,0.5);
+}
+.card-3{
+    grid-area: three;
+    border-top: 3px solid var(--Orange);
+    padding: 20px;
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 0 1em rgba(0,0,0,0.5);
+}
+.card-4{
+    grid-area: four;
+    align-self: center;
+    border-top: 3px solid var(--Blue);
+    padding: 20px;
+    height: 200px;
+    position: relative; 
+    margin-bottom: 20px;
+    box-shadow: 0 0 1em rgba(0,0,0,0.5);
+}
+.card-1 img{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.card-2 img{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.card-3 img{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.card-4 img{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+@media(max-width: 600px){
+    .cards{
+        display: grid;
+        gap: 10px;
+        grid-template-areas: "one one one" "two two two" "three three three" "four four four";
+    }
+}
